@@ -1,0 +1,37 @@
+{{#partial "content"}}
+
+        <h2>Add a new sighting!</h2>
+    {{#if animals}}
+        <form action="/success2" method="post">
+        <div class="form-group">
+            <label for="location">location</label>
+            <select id="location" class="form-control" name="location" placeholder="select location">
+                <option value="zone A">zone A</option>
+                <option value="Near the River">Near the River</option>
+                <option value="Ne Quadrant"> Ne Quadrant </option>
+            </select>
+          </div>
+        <div class="form-group">
+                <label for="rangerName">ranger name</label>
+                <input type="text" class="form-control" id="rangerName" name="rangerName" placeholder="enter ranger name">
+          </div>
+        <div class="form-group">
+            <label for="animalId">animal:</label>
+                <select id="animalId" name="animalId" class="form-control" placeholder="select animal">
+                    {{#each animals}}
+                        <option value="{{id}}">{{name}}</option>
+                    {{/each}}
+                </select>
+        </div>
+                <p>Don't see the right animal?<a href="/animals/new">Add a new one first.</a></p>
+
+            <button type="submit" class="btn btn-default">Add a sighting</button>
+        </form>
+                    {{else}}
+                        <h3> You'll need to add a animal before you add a sighting. <a href="/animals/new">Add one here.</a> </h3>
+
+         {{/if}}
+
+{{/partial}}
+
+{{> layout.hbs}}

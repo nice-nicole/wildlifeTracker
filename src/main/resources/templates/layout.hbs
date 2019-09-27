@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Lobster+Two&display=swap" rel="stylesheet">
+        <style>
+        body{
+        background-image:url("https://static.boredpanda.com/blog/wp-content/uploads/2015/04/lion-attack-photo-portrait-wildlife-photography-atif-saeed-2.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        color:white;
+        font-family: 'Lobster', cursive;
+        }
+        h1,h2{
+        text-align:center;
+        }
+        h1{
+        height: 80%;
+        }
+        </style>
+</head>
+<body>
+<ul class="nav nav-tabs">
+    <li role="presentation" class="active"><a href="/">Home</a></li>
+    <li role="presentation"><a href="/sightings/new">Add a New sighting</a></li>
+    <li role="presentation"><a href="/animals/new">Add a New animal</a></li>
+    <li role="presentation"><a href="/animalsSightings">View Animals and sightings</a></li>
+
+</ul>
+<div class="container">
+    <!--begin main template-->
+    <div class="page-header">
+        <h1> Wildlife Tracker</h1>
+    </div>
+
+    <div class="col-md-12">
+        {{#block "content"}}
+        {{/block}}
+
+    </div>
+</div>
+<!--end main template-->
+{{#block "footer"}}
+
+    </body>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    </html>
+{{/block}}

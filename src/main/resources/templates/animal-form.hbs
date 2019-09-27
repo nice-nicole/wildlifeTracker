@@ -1,0 +1,40 @@
+{{#partial "content"}}
+
+        <h1>Add a new Animal!</h1>
+        <form action="/success" method="post">
+          <div class="form-group">
+            <label for="name">name</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="enter name">
+          </div>
+          <div class="form-group">
+            <label for="health">health</label>
+            <select id="health" class="form-control" name="health" placeholder="select animal's health">
+                <option value="ok">ok</option>
+                <option value="ill">ill</option>
+                <option value="healthy"> healthy </option>
+            </select>
+          </div>
+          <div class="form-group">
+             <label for="endangered">endangered</label>
+             <select id="endangered" class="form-control" name="endangered" placeholder="endangered">
+                 <option value="yes">yes</option>
+                 <option value="no">no</option>
+             </select>
+          </div>
+           <div class="form-group">
+             <label for="age">age</label>
+             <select id="age" class="form-control" name="age" placeholder="select animal's age">
+                 <option value="young">young</option>
+                 <option value="old">old</option>
+                 <option value="newBorn"> newBorn </option>
+             </select>
+           </div>
+
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+
+{{/partial}}
+
+
+
+{{> layout.hbs}}

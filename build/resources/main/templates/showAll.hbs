@@ -1,0 +1,69 @@
+{{#partial "content"}}
+<div class="container">
+<div class="row">
+<div class="col-md-6">
+<h2>Animals</h2>
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">animal id</th>
+      <th scope="col">Name</th>
+      <th scope="col">Health</th>
+      <th scope="col">Endangered</th>
+      <th scope="col">Age</th>
+      <th scope="col">Action</th>
+
+    </tr>
+  </thead>
+      {{#if animals}}
+      {{#each animals}}
+
+  <tbody>
+    <tr>
+      <th scope="row">{{id}}</th>
+      <td>{{name}}</td>
+      <td>{{health}}</td>
+      <td>{{endangered}}</td>
+      <td>{{age}}</td>
+{{!--       <td><button type="submit" class="btn btn-default" <a href="/animals/:id/delete">delete this animal</a></button></td> --}}
+
+    </tr>
+  </tbody>
+    {{/each}}
+  {{/if}}
+</table>
+</div>
+
+<div class="col-md-6">
+<h2>Sightings</h2>
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">Animal Id</th>
+      <th scope="col">Location</th>
+      <th scope="col">RangerName</th>
+
+    </tr>
+  </thead>
+      {{#if sightings}}
+      {{#each sightings}}
+
+  <tbody>
+    <tr>
+      <th scope="row">{{animalId}}</th>
+      <td>{{location}}</td>
+      <td>{{rangerName}}</td>
+{{!--       <td><button type="submit" class="btn btn-default" <a href="/sighting:id/delete">delete this sighting</a></button></td> --}}
+    </tr>
+  </tbody>
+    {{/each}}
+  {{/if}}
+</table>
+</div>
+</div>
+</div>
+{{/partial}}
+
+{{> layout.hbs}}
+
+
