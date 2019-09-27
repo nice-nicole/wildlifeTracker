@@ -54,6 +54,8 @@ Link:-> ```https://github.com/zecollokaris/Hero-Squad-Spark```
 
 5. **get into project folder** (cd into project).
 
+6. create a database and tables
+
 6. If you have all the **Pre-requisites** you can run the application.
 
 ```
